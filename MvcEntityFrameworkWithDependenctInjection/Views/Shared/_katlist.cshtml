@@ -1,0 +1,21 @@
+﻿@model List<Category>
+<!--
+
+ tasarım Index ve Top10 cshtml dosyalarında aynı olduğu için tasarımı burada yapıp ilgili sayfalarda partili render ederiyoruz...
+    
+    -->
+<table class="table table-bordered">
+    <tr>
+        <td>ID</td>
+        <td>Kategori Adı</td>
+        <td>Açıklama</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Description</td>
+        </tr>
+    }
+</table>
